@@ -1,0 +1,48 @@
+# ─── Go ──────────────────────────────────────────────────────────────────────
+
+# Binários compilados
+src/backend/backend
+src/backend/*.exe
+src/backend/*.test
+
+# Cache de build do Go
+src/backend/vendor/
+
+# Cobertura de testes
+*.out
+coverage.html
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+
+# Volumes locais de desenvolvimento (se criados fora do compose)
+docker/pgdata/
+
+# Override local do compose (ex: mapeamento de porta diferente, modo debug)
+docker-compose.override.yml
+
+# ─── Variáveis de ambiente ───────────────────────────────────────────────────
+
+.env
+.env.*
+!.env.example
+
+# ─── macOS ───────────────────────────────────────────────────────────────────
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ─── IDEs e editores ─────────────────────────────────────────────────────────
+
+# VS Code / Kiro
+.vscode/
+
+# JetBrains (GoLand, etc.)
+.idea/
+*.iml
+
+# ─── Logs e temporários ──────────────────────────────────────────────────────
+
+*.log
+tmp/
