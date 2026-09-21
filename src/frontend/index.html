@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Piece — Minha Coleção</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>☠️ One Piece — Minha Coleção</h1>
+    <div class="header-actions">
+      <button id="btn-sync" class="btn-sync">🔄 Sincronizar volumes</button>
+      <span id="progress-text" class="progress-text"></span>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Sidebar: navegação por data de aquisição -->
+    <aside class="sidebar">
+      <nav class="timeline-nav" id="timeline-nav" aria-label="Navegar por data de aquisição">
+        <div class="timeline-header">
+          <span class="timeline-title">📅 Por data</span>
+          <button id="btn-clear-filter" class="btn-clear-filter hidden" aria-label="Limpar filtro de data">✕</button>
+        </div>
+
+        <!-- Navegação por mês -->
+        <div class="month-nav" id="month-nav" role="list" aria-label="Meses"></div>
+
+        <!-- Navegação por dia (aparece ao selecionar um mês) -->
+        <div class="day-nav-wrapper hidden" id="day-nav-wrapper">
+          <div class="day-nav-header">
+            <span id="day-nav-label" class="day-nav-label"></span>
+          </div>
+          <div class="day-nav-pills" id="day-nav" role="list" aria-label="Dias"></div>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Área principal: grid de volumes -->
+    <main class="main-content">
+      <div id="loading" class="loading">Carregando volumes...</div>
+      <div id="error" class="error hidden"></div>
+      <div id="volumes-grid" class="volumes-grid"></div>
+    </main>
+  </div>
+
+  <script src="utils.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

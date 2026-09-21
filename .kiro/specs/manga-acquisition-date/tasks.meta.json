@@ -1,0 +1,186 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Criar struct `updateVolumeRequest` com campos ponteiro e função `parseISO8601WithTZ`": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848861546
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848865097
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850067296
+      }
+    ],
+    "1.2 Reescrever a lógica principal de `UpdateVolume`": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848861619
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850071152
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850141103
+      }
+    ],
+    "2. Checkpoint — verificar backend": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848861683
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850149165
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850223842
+      }
+    ],
+    "3.1 Substituir as variáveis CSS na regra `:root`": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848861723
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848865549
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850067825
+      }
+    ],
+    "3.2 Atualizar a regra `.volume-card.collected .volume-acquired`": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848861764
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850071737
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850140503
+      }
+    ],
+    "4.1 Adicionar verificação de período vazio em `toggleCollected`": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848861799
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850072187
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850141735
+      }
+    ],
+    "5. Checkpoint — verificar frontend": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848861839
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850236650
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850255749
+      }
+    ],
+    "6.1 Extrair funções puras para um módulo `frontend/utils.js` e criar `frontend/utils.test.js`": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848861915
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850149686
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850224585
+      }
+    ],
+    "7. Checkpoint final — testes completos": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789848861949
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850258598
+      },
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850578342
+      }
+    ],
+    "3. Atualizar a paleta de cores no `style.css`": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850140563
+      }
+    ],
+    "1. Refatorar o handler `UpdateVolume` no backend": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850141136
+      }
+    ],
+    "4. Corrigir lógica de limpeza automática de filtro no `app.js`": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850141772
+      }
+    ],
+    "6. Adicionar testes para as funções puras do `app.js`": [
+      {
+        "executionId": "0e128cb5-0e1e-4a42-b3a0-3738daa0b32f",
+        "chatSessionId": "sess_c70e80a7-a492-4c7a-ab49-6c7c9f32519e",
+        "timestamp": 1789850224640
+      }
+    ]
+  }
+}

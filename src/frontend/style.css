@@ -1,0 +1,400 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #1a0f0a;
+  --surface: #2c1a10;
+  --border: #3d2516;
+  --accent: #c8864a;
+  --accent-hover: #e09a5a;
+  --text: #f5e6d3;
+  --text-muted: #9e7a5e;
+  --collected: #2a1f0e;
+  --collected-border: #8b6914;
+  --collected-accent: #a8854a;
+  --radius: 8px;
+  --timeline-bg: #221309;
+  --timeline-border: #3a2010;
+  --pill-bg: #2e1a0e;
+  --pill-active: var(--accent);
+  --pill-active-text: #0d0601;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+
+header {
+  background-color: var(--surface);
+  border-bottom: 2px solid var(--accent);
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-sync {
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-sync:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-sync:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ─── Layout assimétrico ─────────────────────────────────────────────────── */
+
+.app-layout {
+  display: flex;
+  align-items: flex-start;
+  min-height: calc(100vh - 70px); /* desconta o header */
+}
+
+/* Sidebar estreita à esquerda */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  background-color: var(--timeline-bg);
+  border-right: 1px solid var(--timeline-border);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 4px;
+}
+
+/* Área principal — ocupa o restante */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  min-width: 0; /* evita overflow em grids */
+}
+
+/* ─── Timeline de datas (sidebar) ────────────────────────────────────────── */
+
+.timeline-nav {
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.btn-clear-filter {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-clear-filter:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Lista de botões (mês e dia) — empilhados na sidebar */
+.month-nav,
+.day-nav-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Botão base da timeline */
+.timeline-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  background-color: var(--pill-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.8rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+  white-space: nowrap;
+  width: 100%;
+  text-align: left;
+}
+
+.timeline-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.timeline-btn.active {
+  background-color: var(--pill-active);
+  border-color: var(--pill-active);
+  color: var(--pill-active-text);
+  font-weight: 700;
+}
+
+.timeline-btn.active .tl-badge {
+  background-color: rgba(0,0,0,0.25);
+  color: var(--pill-active-text);
+}
+
+/* Badge de contagem dentro dos botões */
+.tl-badge {
+  background-color: var(--border);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.05rem 0.45rem;
+  border-radius: 10px;
+  min-width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Navegação por dia */
+.day-nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid var(--timeline-border);
+  padding-top: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.day-nav-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.day-nav-label {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem;
+  font-size: 1.1rem;
+}
+
+/* Error */
+.error {
+  background-color: #3a1a1a;
+  border: 1px solid #c0392b;
+  color: #e74c3c;
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ─── Grid de volumes ────────────────────────────────────────────────────── */
+
+.volumes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ─── Card de volume ─────────────────────────────────────────────────────── */
+
+.volume-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: border-color 0.2s, background-color 0.2s;
+  cursor: pointer;
+}
+
+.volume-card:hover {
+  border-color: var(--accent);
+}
+
+.volume-card.collected {
+  background-color: var(--collected);
+  border-color: var(--collected-border);
+}
+
+.volume-card img {
+  width: 100%;
+  max-width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: var(--border);
+}
+
+.volume-number {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.volume-title {
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Data de aquisição */
+.volume-acquired {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.4;
+  min-height: 1rem; /* evita layout shift quando vazio */
+}
+
+.volume-card.collected .volume-acquired {
+  color: var(--collected-accent);
+}
+
+/* ─── Checkbox customizado ───────────────────────────────────────────────── */
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--collected-border);
+  cursor: pointer;
+}
+
+.checkbox-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.volume-card.collected .checkbox-label {
+  color: var(--collected-border);
+}
+
+/* ─── Responsivo ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--timeline-border);
+  }
+
+  .timeline-nav {
+    padding: 0.8rem 1rem;
+  }
+
+  /* Na versão mobile a sidebar vira navbar horizontal */
+  .month-nav,
+  .day-nav-pills {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .timeline-btn {
+    width: auto;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .volumes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+}
